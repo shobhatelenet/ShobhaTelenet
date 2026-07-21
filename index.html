@@ -446,45 +446,55 @@
     </table>
 
 </section>
-<!-- ================= PAYMENT SECTION ================= -->
+<!--================== PAYMENT SECTION ==================-->
 
 <section class="payment" id="payment">
 
-    <div class="heading">
-        <h2>Online Payment</h2>
-        <p>Scan QR Code or Pay using UPI</p>
+    <div class="payment-title">
+        <h2><i class="fa-solid fa-wallet"></i> Online Payment</h2>
+        <p>Scan QR Code or Pay Using UPI</p>
     </div>
 
-    <div class="payment-container">
+    <div class="payment-box">
 
-        <div class="payment-card">
+        <div class="qr-box">
 
             <img src="images/phonepe-qr.jpg" alt="PhonePe QR">
 
+        </div>
+
+        <div class="payment-info">
+
             <h3>Suman Mondal</h3>
 
-            <p class="upi">
-                UPI ID :
+            <h4>UPI ID</h4>
+
+            <div class="upi-box">
+
                 <span id="upiText">babusana21@axl</span>
-            </p>
 
-            <button onclick="copyUPI()">
-                <i class="fa-solid fa-copy"></i>
-                Copy UPI ID
-            </button>
+                <button onclick="copyUPI()">
+                    <i class="fa-solid fa-copy"></i>
+                </button>
 
-            <a href="upi://pay?pa=babusana21@axl&pn=Suman%20Mondal" class="pay-btn">
-                <i class="fa-solid fa-money-bill"></i>
+            </div>
+
+            <a href="upi://pay?pa=babusana21@axl&pn=Suman%20Mondal"
+                class="pay-btn">
+
+                <i class="fa-solid fa-credit-card"></i>
+
                 Pay Now
+
             </a>
 
-            <p class="payment-note">
-                Payment করার পরে WhatsApp-এ Screenshot পাঠান।
-            </p>
+            <a href="https://wa.me/917384312121"
+                class="whatsapp-btn">
 
-            <a href="https://wa.me/917384312121" class="whatsapp-btn">
                 <i class="fa-brands fa-whatsapp"></i>
-                Send Screenshot
+
+                Send Payment Screenshot
+
             </a>
 
         </div>

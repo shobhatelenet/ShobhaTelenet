@@ -783,9 +783,9 @@ menuBtn.addEventListener("click", () => {
 });
 function copyUPI(){
 
-const text=document.getElementById("upiText").innerText;
+let upi=document.getElementById("upiText").innerText;
 
-navigator.clipboard.writeText(text);
+navigator.clipboard.writeText(upi);
 
 alert("UPI ID Copied Successfully");
 
