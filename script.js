@@ -781,3 +781,12 @@ ${message}`;
 menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("show");
 });
+function copyUPI(){
+
+const text=document.getElementById("upiText").innerText;
+
+navigator.clipboard.writeText(text);
+
+alert("UPI ID Copied Successfully");
+
+}
