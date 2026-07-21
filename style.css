@@ -1504,10 +1504,12 @@ box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .payment-card img{
-
-width:250px;
-border-radius:10px;
-
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 10px;
 }
 
 .payment-card h3{
