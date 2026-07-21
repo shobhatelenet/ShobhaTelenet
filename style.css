@@ -1241,3 +1241,223 @@ body.dark .contact-form button:hover{
     font-size:30px;
     cursor:pointer;
 }
+/*=====================================
+SERVICE DETAILS MODAL
+=====================================*/
+
+.service-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:100000;
+}
+
+.service-modal.show{
+    display:flex;
+}
+
+.service-modal-content{
+    width:90%;
+    max-width:600px;
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    position:relative;
+    animation:popup .3s ease;
+}
+
+@keyframes popup{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.close-service{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:32px;
+    cursor:pointer;
+}
+
+.service-modal-content i{
+    font-size:60px;
+    color:#0D6EFD;
+    margin-bottom:20px;
+}
+
+.service-modal-content h2{
+    margin-bottom:15px;
+}
+
+.service-modal-content p{
+    color:#555;
+}
+
+.service-info{
+    margin-top:20px;
+}
+
+.service-info ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+.service-buttons{
+    display:flex;
+    gap:15px;
+    margin-top:25px;
+}
+
+.service-buttons .btn{
+    flex:1;
+    text-align:center;
+}
+.btn-order{
+    background:#ff5722;
+    color:#fff;
+}
+
+.btn-order:hover{
+    background:#e64a19;
+}
+.order-section{
+    background:#f8fbff;
+}
+
+.order-section select{
+    width:100%;
+    padding:16px;
+    border:2px solid #eee;
+    border-radius:12px;
+    margin-bottom:18px;
+    outline:none;
+}
+
+.order-section select:focus{
+    border-color:#0D6EFD;
+}
+
+.btn-order{
+    background:#ff5722;
+}
+
+.btn-order:hover{
+    background:#e64a19;
+}
+.video-btn{
+    background:#e91e63;
+    color:#fff;
+}
+
+.video-btn:hover{
+    background:#c2185b;
+}
+/* ==========================
+   MOBILE RESPONSIVE FIX
+========================== */
+
+@media (max-width:768px){
+
+    html,body{
+        overflow-x:hidden;
+        width:100%;
+    }
+
+    header{
+        width:100%;
+    }
+
+    nav{
+        padding:15px 20px;
+        flex-wrap:wrap;
+    }
+
+    .logo h2{
+        font-size:24px;
+    }
+
+    .logo p{
+        font-size:12px;
+    }
+
+    .logo img{
+        width:50px;
+    }
+
+    .menu-btn{
+        display:block;
+        font-size:28px;
+        color:#0D6EFD;
+    }
+
+    #navMenu{
+        position:absolute;
+        top:100%;
+        left:-100%;
+        width:100%;
+        background:#fff;
+        display:flex;
+        flex-direction:column;
+        text-align:center;
+        transition:.4s;
+        box-shadow:0 10px 20px rgba(0,0,0,.1);
+        padding:20px 0;
+    }
+
+    #navMenu.active{
+        left:0;
+    }
+
+    #navMenu li{
+        margin:15px 0;
+    }
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        padding:80px 20px;
+    }
+
+    .hero-content,
+    .hero-image{
+        width:100%;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .hero-content h2{
+        font-size:24px;
+    }
+
+    .hero-image img{
+        width:250px;
+        max-width:100%;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .floating-menu{
+        right:12px;
+        bottom:12px;
+    }
+
+    #liveClock{
+        right:10px;
+        top:80px;
+        font-size:12px;
+    }
+
+}
