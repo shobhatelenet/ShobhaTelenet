@@ -886,6 +886,192 @@ documents:[
 ],
 time:"Instant",
 charge:"Per Page"
+},
+
+{
+    title:"Birth Certificate",
+    keywords:["birth","birth certificate","জন্ম সনদ"],
+    documents:[
+        "Aadhaar Card",
+        "Hospital Record (if available)",
+        "Mobile Number"
+    ],
+    charge:"Contact Office",
+    time:"3-7 Days"
+},
+
+{
+    title:"Income Certificate",
+    keywords:["income","income certificate","আয় শংসাপত্র"],
+    documents:[
+        "Aadhaar Card",
+        "Ration Card",
+        "Income Proof"
+    ],
+    charge:"Contact Office",
+    time:"7-15 Days"
+},
+
+{
+    title:"Caste Certificate",
+    keywords:["caste","caste certificate","জাতি শংসাপত্র"],
+    documents:[
+        "Aadhaar Card",
+        "Ration Card",
+        "Supporting Documents"
+    ],
+    charge:"Contact Office",
+    time:"7-15 Days"
+},
+
+{
+    title:"Ration Card",
+    keywords:["ration","ration card","রেশন কার্ড"],
+    documents:[
+        "Aadhaar Card",
+        "Family Details",
+        "Mobile Number"
+    ],
+    charge:"Contact Office",
+    time:"7-15 Days"
+},
+
+{
+    title:"Ayushman Card",
+    keywords:["ayushman","ayushman card","আয়ুষ্মান"],
+    documents:[
+        "Aadhaar Card",
+        "Mobile Number"
+    ],
+    charge:"Contact Office",
+    time:"Instant"
+},
+
+{
+    title:"e-Shram Card",
+    keywords:["e-shram","eshram","ই-শ্রম"],
+    documents:[
+        "Aadhaar Card",
+        "Mobile Number",
+        "Bank Passbook"
+    ],
+    charge:"Contact Office",
+    time:"Instant"
+},
+
+{
+    title:"PM Kisan",
+    keywords:["pm kisan","kisan","পিএম কিষান"],
+    documents:[
+        "Aadhaar Card",
+        "Bank Passbook",
+        "Land Documents"
+    ],
+    charge:"Contact Office",
+    time:"Contact Office"
+},
+
+{
+    title:"Flight Ticket",
+    keywords:["flight","flight ticket","plane","বিমান টিকিট"],
+    documents:[
+        "Passenger Name",
+        "Mobile Number",
+        "ID Proof"
+    ],
+    charge:"As Per Fare"
+    ,
+    time:"Instant"
+},
+
+{
+    title:"Print Out",
+    keywords:["print","print out","প্রিন্ট"],
+    documents:[
+        "PDF / Image / Document"
+    ],
+    charge:"Per Page"
+    ,
+    time:"Instant"
+},
+
+{
+    title:"Xerox",
+    keywords:["xerox","photocopy","জেরক্স"],
+    documents:[
+        "Original Document"
+    ],
+    charge:"Per Page"
+    ,
+    time:"Instant"
+},
+
+{
+    title:"Lamination",
+    keywords:["lamination","লামিনেশন"],
+    documents:[
+        "Document"
+    ],
+    charge:"Contact Office",
+    time:"5 Minutes"
+},
+
+{
+    title:"Aadhaar Update",
+    keywords:["aadhaar","aadhaar update","আধার"],
+    documents:[
+        "Aadhaar Card",
+        "Mobile Number"
+    ],
+    charge:"As Per UIDAI"
+    ,
+    time:"Instant"
+},
+
+{
+    title:"Voter Card",
+    keywords:["voter","voter card","ভোটার"],
+    documents:[
+        "Aadhaar Card",
+        "Passport Photo",
+        "Mobile Number"
+    ],
+    charge:"Contact Office",
+    time:"7-15 Days"
+},
+
+{
+    title:"Driving Licence",
+    keywords:["driving","licence","dl","ড্রাইভিং লাইসেন্স"],
+    documents:[
+        "Aadhaar Card",
+        "Passport Photo",
+        "Mobile Number"
+    ],
+    charge:"Contact Office",
+    time:"As Per RTO"
+},
+
+{
+    title:"Electricity Bill Payment",
+    keywords:["electricity","bill","বিদ্যুৎ বিল"],
+    documents:[
+        "Consumer Number"
+    ],
+    charge:"As Per Bill"
+    ,
+    time:"Instant"
+},
+
+{
+    title:"Mobile Recharge",
+    keywords:["mobile","recharge","রিচার্জ"],
+    documents:[
+        "Mobile Number"
+    ],
+    charge:"As Per Recharge"
+    ,
+    time:"Instant"
 }
 
 ];

@@ -1865,16 +1865,18 @@ footer{
     cursor:pointer;
 }
 
-.search-suggestions{
+#searchSuggestions{
     position:absolute;
+    top:100%;
+    left:0;
     width:100%;
     background:#fff;
-    border-radius:15px;
+    border-radius:20px;
     margin-top:10px;
-    box-shadow:0 8px 25px rgba(0,0,0,.15);
-    display:none;
-    overflow:hidden;
-    z-index:999;
+    max-height:250px;   /* আগে 350px থাকলে 250px করো */
+    overflow-y:auto;
+    z-index:9999;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
 .search-suggestions .item{
