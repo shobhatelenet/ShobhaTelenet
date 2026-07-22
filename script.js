@@ -795,11 +795,12 @@ title:"New PAN Card",
 keywords:["pan","new pan","প্যান","pan card"],
 documents:[
 "Aadhaar Card",
+"DOB Proof Id-Anything",
 "Mobile Number",
 "Email ID",
 "Passport Photo"
 ],
-time:"3-7 Days",
+time:"10-15 Days",
 charge:"Contact Office"
 },
 
@@ -818,10 +819,9 @@ charge:"Contact Office"
 title:"Aadhaar Update",
 keywords:["aadhaar","adhar","আধার","aadhaar update"],
 documents:[
-"Aadhaar Card",
-"Mobile Number"
+"No service Now",
 ],
-time:"Same Day",
+time:"No Time",
 charge:"Contact Office"
 },
 
@@ -829,7 +829,7 @@ charge:"Contact Office"
 title:"PVC Card",
 keywords:["pvc","pvc card","পিভিসি"],
 documents:[
-"Aadhaar / PAN / Voter"
+"Aadhaar / PAN / Voter/Ration/Ayushman/e-Sharam and other's"
 ],
 time:"15 Minutes",
 charge:"Contact Office"
@@ -840,7 +840,11 @@ title:"Voter Card",
 keywords:["voter","epic","ভোটার"],
 documents:[
 "Aadhaar Card",
-"Passport Photo"
+"Link phone number with Aadhaar card",
+"Passport Photo",
+"For men: Father's and mother's voter cards",
+"For women: Voter cards of both father and mother",
+"For married women: Voter cards of both parents + husband's voter card"
 ],
 time:"As Per Govt.",
 charge:"Contact Office"
@@ -862,7 +866,8 @@ charge:"Contact Office"
 title:"Train Ticket",
 keywords:["train","rail","ticket","ট্রেন"],
 documents:[
-"Aadhaar Card"
+"Aadhaar Card",
+"Phone Numbar"
 ],
 time:"Instant",
 charge:"IRCTC Charge"
@@ -895,6 +900,19 @@ charge:"Per Page"
         "Aadhaar Card",
         "Hospital Record (if available)",
         "Mobile Number"
+    ],
+    charge:"Contact Office",
+    time:"3-7 Days"
+},
+
+{
+    title:"Death Certificate",
+    keywords:["death","death certificate","মৃত"],
+    documents:[
+        "Completed Death Report form along with the Deceased's Medical Certificate",
+        "proof of age/identity",
+        "cremation/burial receipt",
+        "Mother's + Father's Identity proof"
     ],
     charge:"Contact Office",
     time:"3-7 Days"
