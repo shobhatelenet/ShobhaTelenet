@@ -1170,3 +1170,53 @@ document.querySelectorAll(".tag").forEach(tag => {
     });
 
 });
+// =====================
+// Search Button
+// =====================
+
+const searchBtn = document.getElementById("searchBtn");
+
+if (searchBtn) {
+    searchBtn.addEventListener("click", function () {
+        document.getElementById("serviceSearch")
+            .dispatchEvent(new Event("input"));
+    });
+}
+
+// =====================
+// Voice Search
+// =====================
+
+if ("webkitSpeechRecognition" in window || "SpeechRecognition" in window) {
+
+    const SpeechRecognition =
+        window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const recognition = new SpeechRecognition();
+
+    recognition.lang = "en-IN";
+    recognition.interimResults = false;
+
+    const voiceBtn = document.getElementById("voiceBtn");
+
+    if (voiceBtn) {
+
+        voiceBtn.addEventListener("click", function () {
+            recognition.start();
+        });
+
+        recognition.onresult = function (event) {
+
+            const text = event.results[0][0].transcript;
+
+            const input = document.getElementById("serviceSearch");
+
+            input.value = text;
+
+            input.dispatchEvent(new Event("input"));
+
+        };
+
+    }
+
+}

@@ -1820,6 +1820,8 @@ footer{
 }
 /*================ SMART SEARCH =================*/
 
+
+
 .smart-search{
     padding:80px 20px;
     background:#f8f9ff;
@@ -1842,7 +1844,7 @@ footer{
 
 .search-box i{
     font-size:22px;
-    color:#ff9800;
+    color:#070503;
     margin:0 15px;
 }
 
@@ -1853,16 +1855,6 @@ footer{
     background:transparent;
     font-size:18px;
     padding:12px 0;
-}
-
-#clearSearch{
-    width:45px;
-    height:45px;
-    border:none;
-    border-radius:50%;
-    background:#ff9800;
-    color:#fff;
-    cursor:pointer;
 }
 
 #searchSuggestions{
