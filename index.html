@@ -450,54 +450,36 @@
 
 <section class="payment" id="payment">
 
-    <div class="payment-title">
-        <h2><i class="fa-solid fa-wallet"></i> Online Payment</h2>
-        <p>Scan QR Code or Pay Using UPI</p>
-    </div>
+    <h2 class="payment-heading">💳 Online Payment</h2>
+    <p class="payment-subtitle">Scan QR Code or Pay using UPI</p>
 
     <div class="payment-box">
 
-        <div class="qr-box">
+        <img src="images/phonepe-qr.jpg" alt="PhonePe QR" class="payment-qr">
 
-            <img src="images/phonepe-qr.jpg" alt="PhonePe QR">
+        <h3>Suman Mondal</h3>
 
-        </div>
+        <p class="upi-title">UPI ID</p>
 
-        <div class="payment-info">
+        <div class="upi-box">
 
-            <h3>Suman Mondal</h3>
+            <span id="upiText">babusana21@axl</span>
 
-            <h4>UPI ID</h4>
-
-            <div class="upi-box">
-
-                <span id="upiText">babusana21@axl</span>
-
-                <button onclick="copyUPI()">
-                    <i class="fa-solid fa-copy"></i>
-                </button>
-
-            </div>
-
-            <a href="upi://pay?pa=babusana21@axl&pn=Suman%20Mondal"
-                class="pay-btn">
-
-                <i class="fa-solid fa-credit-card"></i>
-
-                Pay Now
-
-            </a>
-
-            <a href="https://wa.me/917384312121"
-                class="whatsapp-btn">
-
-                <i class="fa-brands fa-whatsapp"></i>
-
-                Send Payment Screenshot
-
-            </a>
+            <button onclick="copyUPI()">
+                <i class="fa-solid fa-copy"></i>
+            </button>
 
         </div>
+
+        <a href="upi://pay?pa=babusana21@axl&pn=Suman%20Mondal"
+           class="pay-btn">
+            <i class="fa-solid fa-wallet"></i> Pay Now
+        </a>
+
+        <a href="https://wa.me/917384312121"
+           class="whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i> Send Payment Screenshot
+        </a>
 
     </div>
 

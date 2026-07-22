@@ -781,12 +781,8 @@ ${message}`;
 menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("show");
 });
-function copyUPI(){
-
-let upi=document.getElementById("upiText").innerText;
-
-navigator.clipboard.writeText(upi);
-
-alert("UPI ID Copied Successfully");
-
+function copyUPI() {
+    const upi = document.getElementById("upiText").innerText;
+    navigator.clipboard.writeText(upi);
+    alert("UPI ID Copied Successfully");
 }
