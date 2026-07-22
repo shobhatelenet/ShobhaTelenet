@@ -786,3 +786,201 @@ function copyUPI() {
     navigator.clipboard.writeText(upi);
     alert("UPI ID Copied Successfully");
 }
+/*================ SMART SEARCH =================*/
+
+const services = [
+
+{
+title:"New PAN Card",
+keywords:["pan","new pan","প্যান","pan card"],
+documents:[
+"Aadhaar Card",
+"Mobile Number",
+"Email ID",
+"Passport Photo"
+],
+time:"3-7 Days",
+charge:"Contact Office"
+},
+
+{
+title:"PAN Correction",
+keywords:["pan correction","correction","প্যান সংশোধন"],
+documents:[
+"PAN Card",
+"Aadhaar Card"
+],
+time:"2-5 Days",
+charge:"Contact Office"
+},
+
+{
+title:"Aadhaar Update",
+keywords:["aadhaar","adhar","আধার","aadhaar update"],
+documents:[
+"Aadhaar Card",
+"Mobile Number"
+],
+time:"Same Day",
+charge:"Contact Office"
+},
+
+{
+title:"PVC Card",
+keywords:["pvc","pvc card","পিভিসি"],
+documents:[
+"Aadhaar / PAN / Voter"
+],
+time:"15 Minutes",
+charge:"Contact Office"
+},
+
+{
+title:"Voter Card",
+keywords:["voter","epic","ভোটার"],
+documents:[
+"Aadhaar Card",
+"Passport Photo"
+],
+time:"As Per Govt.",
+charge:"Contact Office"
+},
+
+{
+title:"Passport",
+keywords:["passport","পাসপোর্ট"],
+documents:[
+"Aadhaar Card",
+"PAN Card",
+"Photo"
+],
+time:"Contact Office",
+charge:"Contact Office"
+},
+
+{
+title:"Train Ticket",
+keywords:["train","rail","ticket","ট্রেন"],
+documents:[
+"Aadhaar Card"
+],
+time:"Instant",
+charge:"IRCTC Charge"
+},
+
+{
+title:"Print Out",
+keywords:["print","print out","প্রিন্ট"],
+documents:[
+"PDF / Image"
+],
+time:"Instant",
+charge:"Per Page"
+},
+
+{
+title:"Xerox",
+keywords:["xerox","copy","জেরক্স"],
+documents:[
+"Original Document"
+],
+time:"Instant",
+charge:"Per Page"
+}
+
+];
+
+const input=document.getElementById("serviceSearch");
+const box=document.getElementById("searchSuggestions");
+const clearBtn=document.getElementById("clearSearch");
+
+input.addEventListener("input", function () {
+
+    const value = input.value.trim().toLowerCase();
+
+    box.innerHTML = "";
+
+    if (value === "") {
+        box.style.display = "none";
+        return;
+    }
+
+    const result = services.filter(service =>
+        service.title.toLowerCase().includes(value) ||
+        service.keywords.some(k => k.toLowerCase().includes(value))
+    );
+
+    if (result.length === 0) {
+        box.innerHTML = '<div class="item">No Service Found</div>';
+        box.style.display = "block";
+        return;
+    }
+
+    result.forEach(service => {
+
+        const div = document.createElement("div");
+        div.className = "item";
+
+        div.innerHTML = `
+            <strong>${service.title}</strong><br>
+            <small>Click to View Details</small>
+        `;
+
+        div.onclick = function () {
+
+            box.style.display = "none";
+
+            document.getElementById("popupTitle").innerText = service.title;
+
+            document.getElementById("popupContent").innerHTML = `
+                <h3>📑 Required Documents</h3>
+                <ul>
+                    ${service.documents.map(doc => `<li>${doc}</li>`).join("")}
+                </ul>
+
+                <p><strong>⏱ Time:</strong> ${service.time}</p>
+                <p><strong>💰 Charge:</strong> ${service.charge}</p>
+            `;
+
+            document.getElementById("servicePopup").style.display = "flex";
+
+        };
+
+        box.appendChild(div);
+
+    });
+
+    box.style.display = "block";
+
+});
+
+function closePopup() {
+    document.getElementById("servicePopup").style.display = "none";
+}
+/* Popular Search Buttons */
+
+document.querySelectorAll(".tag").forEach(tag => {
+
+    tag.addEventListener("click", function () {
+
+        const input = document.getElementById("serviceSearch");
+
+        input.value = this.innerText;
+
+        input.dispatchEvent(new Event("input"));
+
+        input.focus();
+
+        setTimeout(() => {
+
+            const firstItem = document.querySelector("#searchSuggestions .item");
+
+            if (firstItem) {
+                firstItem.click();
+            }
+
+        }, 100);
+
+    });
+
+});

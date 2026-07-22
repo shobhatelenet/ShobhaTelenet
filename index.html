@@ -178,32 +178,60 @@
         </div>
 
     </section>
-    <!--================ SEARCH SECTION ================-->
+    <!--================ SMART SEARCH =================-->
 
-<section class="search-section reveal">
+<section class="smart-search reveal" id="smart-search">
 
     <div class="section-title">
+        <h4>SMART SEARCH</h4>
+        <h2>আপনার প্রয়োজনীয় পরিষেবা খুঁজুন</h2>
+        <p>বাংলা অথবা English-এ সার্ভিসের নাম লিখুন</p>
+    </div>
 
-        <h4>FIND SERVICE</h4>
+    <div class="search-wrapper">
 
-        <h2>Search Our Services</h2>
+        <div class="search-box">
 
-        <p>Type any service name below</p>
+            <i class="fas fa-search"></i>
+
+            <input
+                type="text"
+                id="serviceSearch"
+                placeholder="যেমন: PAN, Aadhaar, ভোটার, PVC, Passport..."
+                autocomplete="off">
+
+            <button id="clearSearch">
+                <i class="fas fa-times"></i>
+            </button>
+
+        </div>
+
+        <div id="searchSuggestions" class="search-suggestions"></div>
 
     </div>
 
-    <div class="search-box">
+    <div class="popular-search">
 
-        <input
-            type="text"
-            id="serviceSearch"
-            placeholder="Search Service...">
+        <span>Popular :</span>
+
+        <button class="tag">PAN Card</button>
+        <button class="tag">Aadhaar</button>
+        <button class="tag">Voter</button>
+        <button class="tag">PVC Card</button>
+        <button class="tag">Passport</button>
+        <button class="tag">Train Ticket</button>
+        <button class="tag">Xerox</button>
+        <button class="tag">Print Out</button>
 
     </div>
 
 </section>
 
+<!--================ END SMART SEARCH =================-->
+
+
 <!--================ SERVICES ================-->
+
 
 <section class="services reveal" id="services">
 
@@ -921,6 +949,45 @@
     </div>
 
 </div>
+<!--================ SERVICE POPUP =================-->
+
+<div class="service-popup" id="servicePopup">
+
+    <div class="popup-card">
+
+        <span class="close-popup" onclick="closePopup()">&times;</span>
+
+        <div class="popup-header">
+            <i class="fas fa-id-card"></i>
+            <h2 id="popupTitle">Service Name</h2>
+        </div>
+
+        <div id="popupContent"></div>
+
+       <div class="popup-buttons">
+
+    <a href="tel:7384312121" class="popup-call">
+        <i class="fas fa-phone"></i>
+        Call Now
+    </a>
+
+    <a href="https://wa.me/917384312121"
+       target="_blank"
+       class="popup-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+        WhatsApp
+    </a>
+
+    <a href="https://maps.google.com/?q=Shobha+Telenet"
+       target="_blank"
+       class="popup-map">
+        <i class="fas fa-location-dot"></i>
+        Location
+    </a>
+
+</div>
+
+<!--================ END SERVICE POPUP =================-->
 <script src="script.js"></script>
 </body>
 </html>
