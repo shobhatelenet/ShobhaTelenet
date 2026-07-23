@@ -2165,3 +2165,62 @@ footer{
 .review-box strong{
     color:#0d6efd;
 }
+.search-box{
+    position: relative;
+}
+
+.search-box input{
+    position: relative;
+    z-index: 9999;
+    pointer-events: auto;
+    -webkit-appearance: none;
+}
+
+#clearSearch{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9998;
+}
+.search-box{
+    position: relative;
+}
+
+.search-box input{
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-user-select: text;
+}
+
+.search-box i{
+    pointer-events: none;
+}
+
+#clearSearch{
+    pointer-events: auto;
+    z-index: 11;
+}
+.search-box{
+    position: relative;
+}
+
+.search-box input{
+    position: relative !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+}
+
+.search-box i{
+    pointer-events: none !important;
+}
+
+#clearSearch{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+}
