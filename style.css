@@ -2213,21 +2213,12 @@ footer{
     background:transparent;
     cursor:pointer;
 }
-.search-box *{
-    pointer-events:auto !important;
+html,
+body{
+    overflow-x: hidden;
+    width: 100%;
 }
 
-.search-box input{
-    width:100% !important;
-    flex:1 !important;
-    z-index:99999 !important;
-}
-
-#clearSearch{
-    position:static !important;
-}
-
-.search-box::before,
-.search-box::after{
-    display:none !important;
+*{
+    max-width: 100%;
 }
