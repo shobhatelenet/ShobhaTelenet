@@ -178,6 +178,106 @@
         </div>
 
     </section>
+
+       <!--================ ONLINE ORDER =================-->
+
+<section id="online-order" class="online-order reveal">
+
+    <div class="section-title">
+        <h4>ONLINE ORDER</h4>
+        <h2>Apply for Any Service</h2>
+        <p>Fill in your details to continue.</p>
+    </div>
+
+    <div class="order-container">
+
+        <div class="step-title">
+            <span>STEP 1</span>
+            <h3>Customer Information</h3>
+        </div>
+
+        <div class="form-group">
+            <label>👤 Full Name *</label>
+            <input type="text" id="fullName" placeholder="Enter Full Name" required>
+        </div>
+
+        <div class="form-group">
+            <label>📱 Mobile Number *</label>
+            <input type="tel" id="mobile" placeholder="Enter Mobile Number" required>
+        </div>
+
+        <div class="form-group">
+            <label>💬 WhatsApp Number</label>
+            <input type="tel" id="whatsapp" placeholder="Enter WhatsApp Number">
+        </div>
+
+        <div class="form-group">
+            <label>📧 Email ID</label>
+            <input type="email" id="email" placeholder="Enter Email ID">
+        </div>
+
+        <div class="form-group">
+            <label>🏠 Full Address</label>
+            <textarea id="address" rows="3" placeholder="Village / Post / Police Station / District / PIN"></textarea>
+        </div>
+
+        <!-- STEP 2 -->
+
+<div class="step-title">
+    <span>STEP 2</span>
+    <h3>Select Service</h3>
+</div>
+
+<div class="form-group">
+
+    <label>📋 Select a Service *</label>
+
+    <select id="serviceSelect" required>
+
+        <option value="">-- Select Service --</option>
+
+        <option>New PAN Card</option>
+        <option>PAN Correction</option>
+        <option>Aadhaar Update</option>
+        <option>Voter Card</option>
+        <option>PVC Card</option>
+        <option>Passport</option>
+        <option>Passport Photo</option>
+        <option>Birth Certificate</option>
+        <option>Death Certificate</option>
+        <option>Income Certificate</option>
+        <option>Caste Certificate</option>
+        <option>Residential Certificate</option>
+        <option>Ration Card</option>
+        <option>Ayushman Card</option>
+        <option>e-Shram Card</option>
+        <option>PM Kisan</option>
+        <option>Driving Licence</option>
+        <option>Electricity Bill Payment</option>
+        <option>Mobile Recharge</option>
+        <option>Xerox</option>
+        <option>Print Out</option>
+        <option>Lamination</option>
+        <option>Flight Ticket</option>
+        <option>Train Ticket</option>
+        <option>Others</option>
+
+    </select>
+
+</div>
+
+        <div class="next-btn-box">
+            <button id="nextStep" class="next-btn">
+                Next →
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ END ONLINE ORDER =================-->
+
     <!--================ SMART SEARCH =================-->
 
 <section class="smart-search reveal" id="smart-search">
@@ -333,47 +433,6 @@
     </div>
 
 </section>
-<!--================ ONLINE ORDER ================-->
-
-<section class="order-section reveal" id="order">
-
-    <div class="section-title">
-        <h4>ONLINE ORDER</h4>
-        <h2>Place Your Order</h2>
-        <p>Fill up the form and send your order on WhatsApp.</p>
-    </div>
-
-    <form id="orderForm" class="contact-form">
-
-        <input type="text" id="name" placeholder="Your Name" required>
-
-        <input type="tel" id="mobile" placeholder="Mobile Number" required>
-
-        <select id="service" required>
-            <option value="">Select Service</option>
-            <option>Print</option>
-            <option>Xerox</option>
-            <option>PAN Card</option>
-            <option>PVC Card</option>
-            <option>Passport Photo</option>
-            <option>Lamination</option>
-            <option>Online Form Fill-up</option>
-            <option>Train Ticket</option>
-            <option>Bus Ticket</option>
-            <option>Flight Ticket</option>
-            <option>Other</option>
-        </select>
-
-        <textarea id="message" rows="5" placeholder="Write your order..."></textarea>
-
-        <button type="submit">
-            <i class="fa-brands fa-whatsapp"></i>
-            Send Order
-        </button>
-
-    </form>
-
-</section>
 
 <!--================ COUNTER SECTION ================-->
 
@@ -443,7 +502,7 @@
 
         <tr>
             <td>Black & White Print</td>
-            <td>₹2</td>
+            <td>₹5</td>
         </tr>
 
         <tr>
@@ -453,22 +512,22 @@
 
         <tr>
             <td>Xerox</td>
-            <td>₹2</td>
+            <td>₹3</td>
         </tr>
 
         <tr>
             <td>Lamination</td>
-            <td>₹30</td>
+            <td>₹10+</td>
         </tr>
 
         <tr>
             <td>Passport Photo</td>
-            <td>₹50</td>
+            <td>10 pic ₹50 5 pic ₹30 </td>
         </tr>
 
         <tr>
             <td>PVC Card</td>
-            <td>₹150</td>
+            <td>₹100</td>
         </tr>
 
         <tr>
@@ -482,44 +541,6 @@
         </tr>
 
     </table>
-
-</section>
-<!--================== PAYMENT SECTION ==================-->
-
-<section class="payment" id="payment">
-
-    <h2 class="payment-heading">💳 Online Payment</h2>
-    <p class="payment-subtitle">Scan QR Code or Pay using UPI</p>
-
-    <div class="payment-box">
-
-        <img src="images/phonepe-qr.jpg" alt="PhonePe QR" class="payment-qr">
-
-        <h3>Suman Mondal</h3>
-
-        <p class="upi-title">UPI ID</p>
-
-        <div class="upi-box">
-
-            <span id="upiText">babusana21@axl</span>
-
-            <button onclick="copyUPI()">
-                <i class="fa-solid fa-copy"></i>
-            </button>
-
-        </div>
-
-        <a href="upi://pay?pa=babusana21@axl&pn=Suman%20Mondal"
-           class="pay-btn">
-            <i class="fa-solid fa-wallet"></i> Pay Now
-        </a>
-
-        <a href="https://wa.me/917384312121"
-           class="whatsapp-btn">
-            <i class="fa-brands fa-whatsapp"></i> Send Payment Screenshot
-        </a>
-
-    </div>
 
 </section>
 

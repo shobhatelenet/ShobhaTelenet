@@ -2053,3 +2053,14 @@ footer{
 .popup-map:hover{
     transform:translateY(-2px);
 }
+/* Hide Online Order & Payment (Temporary) */
+
+#online-order,
+#payment{
+    display:none;
+}
+
+a[href="#online-order"],
+a[href="#payment"]{
+    display:none;
+}
