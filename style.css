@@ -2175,3 +2175,59 @@ footer{
     padding: 8px;
     flex-shrink: 0;
 }
+.smart-search{
+    background:#fff;
+    padding:80px 20px;
+}
+
+.search-box{
+    position:relative;
+    display:flex;
+    align-items:center;
+    width:100%;
+    max-width:750px;
+    margin:auto;
+    background:#fff;
+    border-radius:60px;
+    padding:10px 20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    gap:10px;
+}
+
+.search-box input{
+    flex:1;
+    width:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    font-size:18px;
+    padding:12px;
+}
+
+.search-box input:focus{
+    border:none;
+}
+
+#clearSearch{
+    border:none;
+    background:transparent;
+    cursor:pointer;
+}
+.search-box *{
+    pointer-events:auto !important;
+}
+
+.search-box input{
+    width:100% !important;
+    flex:1 !important;
+    z-index:99999 !important;
+}
+
+#clearSearch{
+    position:static !important;
+}
+
+.search-box::before,
+.search-box::after{
+    display:none !important;
+}
