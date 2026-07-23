@@ -753,31 +753,7 @@ window.addEventListener("click", (e) => {
     }
 
 });
-document.getElementById("orderForm").addEventListener("submit", function(e){
 
-    e.preventDefault();
-
-    let name = document.getElementById("name").value;
-    let mobile = document.getElementById("mobile").value;
-    let service = document.getElementById("service").value;
-    let message = document.getElementById("message").value;
-
-    let text =
-`*NEW ONLINE ORDER*
-
-👤 Name : ${name}
-📱 Mobile : ${mobile}
-🛒 Service : ${service}
-
-📝 Details :
-${message}`;
-
-    window.open(
-        "https://wa.me/917384312121?text=" + encodeURIComponent(text),
-        "_blank"
-    );
-
-});
 menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("show");
 });
@@ -1236,5 +1212,167 @@ if ("webkitSpeechRecognition" in window || "SpeechRecognition" in window) {
         };
 
     }
+
+}
+/*================ ONLINE ORDER STEP =================*/
+
+const step1 = document.getElementById("step1");
+const step2 = document.getElementById("step2");
+
+const nextStep = document.getElementById("nextStep");
+const backStep1 = document.getElementById("backStep1");
+
+if (nextStep) {
+    nextStep.addEventListener("click", function () {
+
+        const name = document.getElementById("fullName").value.trim();
+        const mobile = document.getElementById("mobile").value.trim();
+
+        if (name === "") {
+            alert("Please Enter Your Full Name");
+            return;
+        }
+
+        if (mobile === "") {
+            alert("Please Enter Mobile Number");
+            return;
+        }
+
+        step1.style.display = "none";
+        step2.style.display = "block";
+
+    });
+}
+
+if (backStep1) {
+    backStep1.addEventListener("click", function () {
+
+        step2.style.display = "none";
+        step1.style.display = "block";
+
+    });
+}
+// STEP 2 → STEP 3
+
+const nextStep2 = document.getElementById("nextStep2");
+
+if (nextStep2) {
+
+    nextStep2.addEventListener("click", function () {
+
+        const service = document.getElementById("serviceSelect").value;
+
+        if (service === "") {
+            alert("Please select a service.");
+            return;
+        }
+
+        document.getElementById("step2").style.display = "none";
+        document.getElementById("step3").style.display = "block";
+
+    });
+
+}
+// STEP 3 → STEP 4
+
+const nextStep3 = document.getElementById("nextStep3");
+
+if(nextStep3){
+
+    nextStep3.addEventListener("click",function(){
+
+        document.getElementById("reviewName").innerText =
+        document.getElementById("fullName").value;
+
+        document.getElementById("reviewMobile").innerText =
+        document.getElementById("mobile").value;
+
+        document.getElementById("reviewWhatsapp").innerText =
+        document.getElementById("whatsapp").value;
+
+        document.getElementById("reviewEmail").innerText =
+        document.getElementById("email").value;
+
+        document.getElementById("reviewAddress").innerText =
+        document.getElementById("address").value;
+
+        document.getElementById("reviewService").innerText =
+        document.getElementById("serviceSelect").value;
+
+        const file =
+        document.getElementById("documents").files[0];
+
+        document.getElementById("reviewFile").innerText =
+        file ? file.name : "No File Selected";
+
+        document.getElementById("step3").style.display="none";
+        document.getElementById("step4").style.display="block";
+
+    });
+
+}
+
+
+// Back
+
+const backStep3=document.getElementById("backStep3");
+
+if(backStep3){
+
+    backStep3.addEventListener("click",function(){
+
+        document.getElementById("step4").style.display="none";
+        document.getElementById("step3").style.display="block";
+
+    });
+
+}
+
+
+// Submit
+
+const submitOrder = document.getElementById("submitOrder");
+
+if (submitOrder) {
+
+    submitOrder.addEventListener("click", function () {
+
+        const name = document.getElementById("fullName").value;
+        const mobile = document.getElementById("mobile").value;
+        const whatsapp = document.getElementById("whatsapp").value;
+        const email = document.getElementById("email").value;
+        const address = document.getElementById("address").value;
+        const service = document.getElementById("serviceSelect").value;
+
+        const file = document.getElementById("documents").files[0];
+        const fileName = file ? file.name : "No File";
+
+        const message =
+`*🛒 NEW ONLINE ORDER*
+
+👤 Name : ${name}
+
+📱 Mobile : ${mobile}
+
+💬 WhatsApp : ${whatsapp}
+
+📧 Email : ${email}
+
+🏠 Address :
+${address}
+
+📋 Service :
+${service}
+
+📂 Document :
+${fileName}`;
+
+        window.open(
+            "https://wa.me/917384312121?text=" +
+            encodeURIComponent(message),
+            "_blank"
+        );
+
+    });
 
 }

@@ -145,31 +145,27 @@
 
             <div class="hero-buttons">
 
-                <a href="#services" class="btn">
+    <a href="#services" class="btn">
+        Our Services
+    </a>
 
-                    Our Services
+    <a href="tel:+917384312121" class="btn btn2">
+        Call Now
+    </a>
 
-                </a>
+    <a href="https://wa.me/917384312121?text=Hello,%20I%20want%20to%20book%20a%20Video%20Call."
+       class="btn video-btn"
+       target="_blank">
+        <i class="fa-solid fa-video"></i>
+        Video Call
+    </a>
 
-                <a href="tel:+917384312121" class="btn btn2">
+    <a href="#online-order" class="btn btn-order">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Online Order
+    </a>
 
-                    Call Now
-
-                </a>
-                <a href="https://wa.me/917384312121?text=Hello,%20I%20want%20to%20book%20a%20Video%20Call."
-   class="btn video-btn"
-   target="_blank">
-   <i class="fa-solid fa-video"></i>
-   Video Call
-</a>
-
-                <a href="#order" class="btn btn-order">
-    <i class="fa-solid fa-cart-shopping"></i> Online Order
-</a>
-
-            </div>
-
-        </div>
+</div>
 
         <div class="hero-image">
 
@@ -190,6 +186,8 @@
     </div>
 
     <div class="order-container">
+
+    <div class="order-step" id="step1">
 
         <div class="step-title">
             <span>STEP 1</span>
@@ -221,58 +219,144 @@
             <textarea id="address" rows="3" placeholder="Village / Post / Police Station / District / PIN"></textarea>
         </div>
 
-        <!-- STEP 2 -->
-
-<div class="step-title">
-    <span>STEP 2</span>
-    <h3>Select Service</h3>
-</div>
-
-<div class="form-group">
-
-    <label>📋 Select a Service *</label>
-
-    <select id="serviceSelect" required>
-
-        <option value="">-- Select Service --</option>
-
-        <option>New PAN Card</option>
-        <option>PAN Correction</option>
-        <option>Aadhaar Update</option>
-        <option>Voter Card</option>
-        <option>PVC Card</option>
-        <option>Passport</option>
-        <option>Passport Photo</option>
-        <option>Birth Certificate</option>
-        <option>Death Certificate</option>
-        <option>Income Certificate</option>
-        <option>Caste Certificate</option>
-        <option>Residential Certificate</option>
-        <option>Ration Card</option>
-        <option>Ayushman Card</option>
-        <option>e-Shram Card</option>
-        <option>PM Kisan</option>
-        <option>Driving Licence</option>
-        <option>Electricity Bill Payment</option>
-        <option>Mobile Recharge</option>
-        <option>Xerox</option>
-        <option>Print Out</option>
-        <option>Lamination</option>
-        <option>Flight Ticket</option>
-        <option>Train Ticket</option>
-        <option>Others</option>
-
-    </select>
-
-</div>
-
         <div class="next-btn-box">
-            <button id="nextStep" class="next-btn">
-                Next →
-            </button>
-        </div>
+    <button type="button" id="nextStep" class="next-btn">
+        Next →
+    </button>
+</div>
+
+</div>
+
+       <!-- STEP 2 -->
+
+<div class="order-step" id="step2" style="display:none;">
+
+    <div class="step-title">
+        <span>STEP 2</span>
+        <h3>Select Service</h3>
+    </div>
+
+    <div class="form-group">
+
+        <label>📋 Select a Service *</label>
+
+        <select id="serviceSelect" required>
+
+            <option value="">-- Select Service --</option>
+
+            <option>New PAN Card</option>
+            <option>PAN Correction</option>
+            <option>Aadhaar Update</option>
+            <option>Voter Card</option>
+            <option>PVC Card</option>
+            <option>Passport</option>
+            <option>Passport Photo</option>
+            <option>Birth Certificate</option>
+            <option>Death Certificate</option>
+            <option>Income Certificate</option>
+            <option>Caste Certificate</option>
+            <option>Residential Certificate</option>
+            <option>Ration Card</option>
+            <option>Ayushman Card</option>
+            <option>e-Shram Card</option>
+            <option>PM Kisan</option>
+            <option>Driving Licence</option>
+            <option>Electricity Bill Payment</option>
+            <option>Mobile Recharge</option>
+            <option>Xerox</option>
+            <option>Print Out</option>
+            <option>Lamination</option>
+            <option>Flight Ticket</option>
+            <option>Train Ticket</option>
+            <option>Others</option>
+
+        </select>
 
     </div>
+
+    <div class="next-btn-box">
+
+        <button type="button" id="backStep1" class="back-btn">
+            ← Back
+        </button>
+
+        <button type="button" id="nextStep2" class="next-btn">
+            Next →
+        </button>
+
+    </div>
+
+</div> <!-- step2 -->
+
+<!-- STEP 3 -->
+
+<div class="order-step" id="step3" style="display:none;">
+
+    <div class="step-title">
+        <span>STEP 3</span>
+        <h3>Upload Documents</h3>
+    </div>
+
+    <div class="form-group">
+        <label>📂 Upload Document</label>
+        <input type="file" id="documents">
+    </div>
+
+    <div class="next-btn-box">
+
+        <button type="button" id="backStep2" class="back-btn">
+            ← Back
+        </button>
+
+        <button type="button" id="nextStep3" class="next-btn">
+            Next →
+        </button>
+
+    </div>
+
+</div>
+<!-- STEP 4 -->
+
+<div class="order-step" id="step4" style="display:none;">
+
+    <div class="step-title">
+        <span>STEP 4</span>
+        <h3>Review & Submit</h3>
+    </div>
+
+    <div class="review-box">
+
+        <p><strong>👤 Name:</strong> <span id="reviewName"></span></p>
+
+        <p><strong>📱 Mobile:</strong> <span id="reviewMobile"></span></p>
+
+        <p><strong>💬 WhatsApp:</strong> <span id="reviewWhatsapp"></span></p>
+
+        <p><strong>📧 Email:</strong> <span id="reviewEmail"></span></p>
+
+        <p><strong>🏠 Address:</strong> <span id="reviewAddress"></span></p>
+
+        <p><strong>📋 Service:</strong> <span id="reviewService"></span></p>
+
+        <p><strong>📂 Document:</strong> <span id="reviewFile"></span></p>
+
+    </div>
+
+    <div class="next-btn-box">
+
+        <button type="button" id="backStep3" class="back-btn">
+            ← Back
+        </button>
+
+        <button type="button" id="submitOrder" class="next-btn">
+            Submit Order
+        </button>
+
+    </div>
+
+</div>
+
+</div> <!-- order-container -->
 
 </section>
 

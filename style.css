@@ -1328,14 +1328,6 @@ SERVICE DETAILS MODAL
     flex:1;
     text-align:center;
 }
-.btn-order{
-    background:#ff5722;
-    color:#fff;
-}
-
-.btn-order:hover{
-    background:#e64a19;
-}
 .order-section{
     background:#f8fbff;
 }
@@ -1368,6 +1360,16 @@ SERVICE DETAILS MODAL
 .video-btn:hover{
     background:#c2185b;
 }
+
+.btn-order{
+    background:#ff5722;
+    color:#fff;
+}
+
+.btn-order:hover{
+    background:#e64a19;
+}
+
 #navMenu.show{
     left:0;
 }
@@ -2053,14 +2055,113 @@ footer{
 .popup-map:hover{
     transform:translateY(-2px);
 }
-/* Hide Online Order & Payment (Temporary) */
+/*================ ONLINE ORDER =================*/
 
-#online-order,
-#payment{
-    display:none;
+.online-order{
+    padding:80px 8%;
+    background:#f8fbff;
 }
 
-a[href="#online-order"],
-a[href="#payment"]{
-    display:none;
+.order-container{
+    max-width:800px;
+    margin:auto;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.order-step{
+    display:block;
+}
+
+.step-title span{
+    color:#0d6efd;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.step-title h3{
+    margin:10px 0 25px;
+    font-size:28px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:14px 16px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+    box-sizing:border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+    border-color:#0d6efd;
+}
+
+.next-btn-box{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    margin-top:30px;
+}
+
+.next-btn,
+.back-btn{
+    border:none;
+    padding:14px 28px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+}
+
+.next-btn{
+    background:#0d6efd;
+    color:#fff;
+}
+
+.back-btn{
+    background:#6c757d;
+    color:#fff;
+}
+
+.next-btn:hover{
+    background:#0b5ed7;
+}
+
+.back-btn:hover{
+    background:#5a6268;
+}
+.review-box{
+    background:#f8f9fa;
+    border-radius:15px;
+    padding:20px;
+    margin:25px 0;
+}
+
+.review-box p{
+    margin:12px 0;
+    font-size:17px;
+}
+
+.review-box strong{
+    color:#0d6efd;
 }
